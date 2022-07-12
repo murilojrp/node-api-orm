@@ -1,5 +1,5 @@
-import user from './user';
+import usuario from './usuarioRoute';
 
 export default {
-  user,
+  usuario,
 };

@@ -19,7 +19,7 @@ app.use(morgan('combined', { stream: accessLogStream }));
 app.use(express.json({ limit: '50mb' }));
 app.use(express.urlencoded({ extended: true, limit: '50mb' }));
 
-app.use('/user', isAuthenticated, routes.user);
+app.use('/usuario', routes.usuario);
 
 app.use((req, res) => {
   res.status(404).send('404: Page not found');

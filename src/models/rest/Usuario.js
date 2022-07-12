@@ -1,19 +1,19 @@
-const user = (sequelize, DataTypes) => {
-  const User = sequelize.define(
-    'user',
+const usuario = (sequelize, DataTypes) => {
+  const Usuario = sequelize.define(
+    'usuarios',
     {
       id: {
         type: DataTypes.INTEGER,
         primaryKey: true,
         autoIncrement: true,
       },
-      username: {
+      login: {
         type: DataTypes.STRING,
         unique: true,
       },
-      password: {
+      senha: {
         type: DataTypes.STRING,
-      },
+      }
     },
     {
       timestamps: true,
@@ -21,8 +21,8 @@ const user = (sequelize, DataTypes) => {
     }
   );
 
-  User.sync();
-  return User;
+  Usuario.sync();
+  return Usuario;
 };
 
-export default user;
+export default usuario;
